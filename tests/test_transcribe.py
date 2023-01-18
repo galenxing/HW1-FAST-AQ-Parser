@@ -4,6 +4,9 @@ from seqparser import (
         transcribe,
         reverse_transcribe)
 
+import pathlib
+
+
 
 def test_freebie_transcribe_1():
     """
@@ -26,7 +29,8 @@ def test_transcribe():
     Write your unit test for the
     transcribe function here.
     """
-    pass
+    s = "ACTGAACCC"
+    assert transcribe(s) == "UGACUUGGG"
 
 
 def test_reverse_transcribe():
@@ -34,4 +38,5 @@ def test_reverse_transcribe():
     Write your unit test for the
     reverse transcribe function here.
     """
-    pass
+    s = "ACTGAACCC"
+    assert reverse_transcribe(s) == "GGGUUCAGU"
